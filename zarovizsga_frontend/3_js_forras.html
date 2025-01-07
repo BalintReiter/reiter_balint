@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript Unit teszt feladat</title>
+	<script type="text/javascript">
+		<!-- Ide jön  a feladat megoldása... -->
+		function kivalogatParosOtven(inputArray) {
+			let outputArray = [];
+			for (let i = 1; i <= inputArray.length; i++) {
+				if (i % 2 == 0 && i > 50) {
+					outputArray.push(i);
+				}
+			}
+			return outputArray;
+		}
+
+		function aBetukSzamaDiv() {
+			let darabszam = 0;
+			let elsoDivBelsoTartalma = document.getElementsByTagName("div")[0].innerHTML;
+
+			for (let i = 0; i < elsoDivBelsoTartalma.length; i++) {
+				if (elsoDivBelsoTartalma.charAt(i) == "a") {
+					darabszam++;
+				}
+			} return darabszam;
+		}
+		function osszeadasFeliras(osztaly, elsoOp, masodikOp) {
+			
+			let elsoTagOsztalya = document.getElementsByClassName(osztaly)[0]; //Első olyan osztály megtalálása, amelyet a felhasználó paraméterbe adott 
+			let eredmeny = parseInt(elsoOp) + parseInt(masodikOp);
+
+			let p = document.createElement('p')
+			p.appendChild(document.createTextNode(elsoOp + "+" + masodikOp + "=" + eredmeny))
+			elsoTagOsztalya.appendChild(p);
+		}
+		
+		
+		</script>
+			
+			<script src="testBaseUnit.js"></script>
+</head>
+
+<body>
+	<div></div>
+
+	</div>
+	<hr>
+	<div id="testResult">
+		<h2>Tesztek</h2>
+	</div>
+</body>
+
+</html>
